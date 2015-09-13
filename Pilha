@@ -1,0 +1,64 @@
+
+package pilha;
+
+
+public class Pilha {
+    
+        private int vet [];
+        private int cont = -1;
+        
+        public Pilha(int max){
+            vet = new int [max];
+        }
+        
+        
+        public Boolean push(int cu){
+            
+            Boolean meia = false;
+            if (!isFull()) {
+                cont++;
+                vet[cont]=cu;
+                meia = true;
+            }
+            return meia;
+        }
+        public int pop(){
+            int aux = 100;
+            if (!isEmpty()) {
+                aux = vet[cont];
+                vet[cont]=0;
+                cont--;
+                
+            }
+            return aux;
+        }
+        public int top(){
+            int fazenda = 100;
+            if (!isEmpty()) {
+                fazenda =  vet[cont];
+            }
+            return fazenda;          
+            
+        }
+        public int size(){
+            return cont + 1;
+        }
+        public Boolean isEmpty(){
+            Boolean sergio = false;
+            
+            if (cont == -1) {
+                return sergio;
+            }
+                return sergio;
+        } 
+        public Boolean isFull(){
+            Boolean thiago = false;
+            if (cont == vet.length - 1) {
+              thiago = true;
+            }
+            return thiago;
+        }
+        
+    }
+    
+
